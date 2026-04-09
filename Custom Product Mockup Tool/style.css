@@ -1,0 +1,118 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    border: 2px solid black;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.mockup-sec {
+    /* border: 1px solid orange; */
+    padding: 10px;
+    max-width: 225px;
+
+}
+
+.mockup-sec p {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+}
+
+.mockup-sec .shirt-sec {
+    border: 1px solid black;
+}
+
+.shirt-sec img{
+    position: relative;
+}
+.shirt-sec p{
+    position: absolute;
+    top: 280px;
+    left: 430px;
+    color: antiquewhite;
+    opacity: 0.7;
+}
+
+.changing-sec {
+    /* border: 1px solid orangered; */
+    padding: 5px;
+}
+
+.changing-sec .about-tshirt p {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 5px;
+}
+
+.changing-sec .about-tshirt input {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.changing-sec .font {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.changing-sec .font p {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 5px;
+}
+
+.changing-sec .font #font-selection {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+}
+.colors{
+    margin-top: 10px;
+}
+.colors p {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 15px;
+
+}
+
+.colors .clrs-pallets {
+    display: flex;
+    align-items: center;
+    gap: 8px
+}
+
+.colors .clrs-pallets .color-box {
+    /* width: 25px;
+    height: 25px; */
+    background-color: brown;
+    border-radius: 30px;
+    padding: 15px;
+    border: 1px solid black;
+
+}
+
+.changing-sec button{
+    margin-top: 40px;
+    padding: 15px;
+    width: 100%;
+    background-color: green;
+    color: white;
+    border: none;
+    font-weight: bold;
+}
