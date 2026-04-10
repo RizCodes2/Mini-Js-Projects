@@ -1,46 +1,32 @@
 const applybtn = document.getElementById("apply-btn");
 
-const black = document.getElementById("black-color");
-const blue = document.getElementById("blue-color");
-const brown = document.getElementById("brown-color");
-const green = document.getElementById("green-color");
-const orange = document.getElementById("orange-color");
-const red = document.getElementById("red-color");
-const white = document.getElementById("white-color");
+const input_text = document.getElementById("shirt-user-text");
+
+const colorButtons = document.querySelectorAll(".clr-btn");
 
 const Tshirt = document.getElementById("Tshirt");
+
+colorButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const clrname = button.getAttribute("data-shirt");
+        Tshirt.src = `Shirts/${clrname} Shirt.png`;
+
+    })
+})
+
+
 
 
 const new_shirt_text = document.getElementById("Tshirt-text");
 
-
-blue.addEventListener("click", () => {
-    Tshirt.src = "Shirts/blue Shirt.png"
-
-})
-white.addEventListener("click", () => {
-    Tshirt.src = "Shirts/white Shirt.png"
-})
-red.addEventListener("click", () => {
-    Tshirt.src = "Shirts/red Shirt.png"
-})
-orange.addEventListener("click", () => {
-    Tshirt.src = "Shirts/orange Shirt.png"
-})
-green.addEventListener("click", () => {
-    Tshirt.src = "Shirts/green Shirt.png"
-})
-brown.addEventListener("click", () => {
-    Tshirt.src = "Shirts/brown Shirt.png"
-})
-black.addEventListener("click", () => {
-    Tshirt.src = "Shirts/black Shirt.png"
-})
-
+const fontpicker = document.getElementById("font-selection");
 
 applybtn.addEventListener("click", () => {
-    const User_Tshirt_Text = document.getElementById("shirt-user-text").value;
+    const User_Tshirt_Text = input_text.value;
+    const selectedFont = fontpicker.value;
 
+    console.log("Selected Font:", selectedFont);
     console.log(User_Tshirt_Text);
     new_shirt_text.innerText = User_Tshirt_Text;
+    new_shirt_text.style.fontFamily = selectedFont;
 })
