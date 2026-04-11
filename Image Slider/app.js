@@ -46,11 +46,9 @@ prev2.addEventListener("click", () => {
     updateSlider();
 });
 
-
-
+// upper simple slider logic
 
 let currentindex = 0;
-
 
 prev1.addEventListener("click", () => {
     currentindex--;
