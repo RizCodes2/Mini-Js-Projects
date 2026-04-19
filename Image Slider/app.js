@@ -66,3 +66,4 @@ next1.addEventListener("click", () => {
     uperImage.src = images[currentindex];
 
 })
+
