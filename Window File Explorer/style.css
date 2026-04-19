@@ -425,14 +425,34 @@ body {
 }
 
 
+.localC .inside-localC{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+}
+
+
 .localC .inside-localC img {
     width: 110px;
     height: 110px;
     /* border: 1px solid yellow; */
-    padding: 5px;
+    /* padding: 5px; */
 }
-
-
+.localC .inside-localC .Citems{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 4px;
+}
+.localC .inside-localC .Citems:hover{
+    background-color: #575757;
+}
+.localC .inside-localC .Citems span{
+    color: white;
+    font-size: 12px;
+}
 
 
 
