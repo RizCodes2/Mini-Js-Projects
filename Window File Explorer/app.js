@@ -35,3 +35,16 @@ ThisPc.forEach(e => {
 
     });
 });
+
+// actions for local disk C
+
+const localC = document.querySelector(".localC");
+const folder_drives = document.querySelector(".folder-drives");
+
+const LocalDisk_C = document.querySelector(".disk-one");
+
+LocalDisk_C.addEventListener("dblclick", ()=>{
+    localC.style.display = "block";
+    folder_drives.style.display = "none";
+    dsection.style.display = "none";
+})

@@ -424,6 +424,9 @@ body {
     padding: 5.5px;
 }
 
+.localC{
+    display: none;
+}
 
 .localC .inside-localC{
     display: flex;
