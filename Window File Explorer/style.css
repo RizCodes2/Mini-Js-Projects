@@ -459,6 +459,110 @@ body {
 
 
 
+.localD{
+    display: none;
+}
+
+.localD .inside-localD{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+}
+
+
+.localD .inside-localD img {
+    width: 110px;
+    height: 110px;
+    /* border: 1px solid yellow; */
+    /* padding: 5px; */
+}
+.localD .inside-localD .Ditems{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 4px;
+}
+.localD .inside-localD .Ditems:hover{
+    background-color: #575757;
+}
+.localD .inside-localD .Ditems span{
+    color: white;
+    font-size: 12px;
+}
+
+
+.localE{
+    display: none;
+}
+.localE .inside-localE{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+}
+
+
+.localE .inside-localE img {
+    width: 110px;
+    height: 110px;
+    /* border: 1px solid yellow; */
+    /* padding: 5px; */
+}
+.localE .inside-localE .Eitems{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 4px;
+}
+.localE .inside-localE .Eitems:hover{
+    background-color: #575757;
+}
+.localE .inside-localE .Eitems span{
+    color: white;
+    font-size: 12px;
+}
+
+
+
+
+.localF{
+    display: none;
+}
+.localF .inside-localF{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+}
+
+
+.localF .inside-localF img {
+    width: 110px;
+    height: 110px;
+    /* border: 1px solid yellow; */
+    /* padding: 5px; */
+}
+.localF .inside-localF .Fitems{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 4px;
+}
+.localF .inside-localF .Fitems:hover{
+    background-color: #575757;
+}
+.localF .inside-localF .Fitems span{
+    color: white;
+    font-size: 12px;
+}
+
+
+
+
 
 
 

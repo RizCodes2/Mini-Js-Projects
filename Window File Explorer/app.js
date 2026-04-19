@@ -48,3 +48,41 @@ LocalDisk_C.addEventListener("dblclick", ()=>{
     folder_drives.style.display = "none";
     dsection.style.display = "none";
 })
+
+
+// actions for local disk D
+
+const localD = document.querySelector(".localD");
+
+const LocalDisk_D = document.querySelector(".disk-two");
+
+LocalDisk_D.addEventListener("dblclick", () => {
+    localD.style.display = "block";
+    folder_drives.style.display = "none";
+    dsection.style.display = "none";
+})
+
+
+// actions for local disk E
+
+const localE = document.querySelector(".localE");
+
+const LocalDisk_E = document.querySelector(".disk-three");
+
+LocalDisk_E.addEventListener("dblclick", () => {
+    localE.style.display = "block";
+    folder_drives.style.display = "none";
+    dsection.style.display = "none";
+})
+
+// actions for local disk F
+
+const localF = document.querySelector(".localF");
+
+const LocalDisk_F = document.querySelector(".disk-four");
+
+LocalDisk_F.addEventListener("dblclick", () => {
+    localF.style.display = "block";
+    folder_drives.style.display = "none";
+    dsection.style.display = "none";
+})
