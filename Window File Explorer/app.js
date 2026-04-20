@@ -4,6 +4,42 @@ const folder_right = document.querySelector(".folder-drive-right-arrow");
 
 const dsection = document.querySelector(".d-section");
 
+// sidebar options arrows selection
+
+const Pc_Arrow = document.querySelector(".ThisPc-arrow");
+
+// selecting this pc from sidebar
+
+const ThisPc = document.querySelectorAll(".Pcname");
+
+// selecting local disks
+
+const localC = document.querySelector(".localC");
+const folder_drives = document.querySelector(".folder-drives");
+
+const LocalDisk_C = document.querySelector(".disk-one");
+
+// actions for local disk D
+
+const localD = document.querySelector(".localD");
+
+const LocalDisk_D = document.querySelector(".disk-two");
+
+// actions for local disk E
+
+const localE = document.querySelector(".localE");
+
+const LocalDisk_E = document.querySelector(".disk-three");
+
+// actions for local disk F
+
+const localF = document.querySelector(".localF");
+
+const LocalDisk_F = document.querySelector(".disk-four");
+
+
+
+
 // folder tiles toggle
 
 folder_right.addEventListener("click", () => {
@@ -15,7 +51,6 @@ folder_right.addEventListener("click", () => {
 
 // sidebar options arrows selection and toggle 
 
-const Pc_Arrow = document.querySelector(".ThisPc-arrow");
 
 Pc_Arrow.addEventListener("click", () => {
     Pc_Arrow.classList.toggle("pcarrow-rotate");
@@ -26,7 +61,6 @@ Pc_Arrow.addEventListener("click", () => {
 
 // selecting this pc from side bar
 
-const ThisPc = document.querySelectorAll(".Pcname");
 
 ThisPc.forEach(e => {
     e.addEventListener("click", () => {
@@ -38,11 +72,6 @@ ThisPc.forEach(e => {
 
 // actions for local disk C
 
-const localC = document.querySelector(".localC");
-const folder_drives = document.querySelector(".folder-drives");
-
-const LocalDisk_C = document.querySelector(".disk-one");
-
 LocalDisk_C.addEventListener("dblclick", () => {
     localC.style.display = "block";
     folder_drives.style.display = "none";
@@ -52,9 +81,7 @@ LocalDisk_C.addEventListener("dblclick", () => {
 
 // actions for local disk D
 
-const localD = document.querySelector(".localD");
 
-const LocalDisk_D = document.querySelector(".disk-two");
 
 LocalDisk_D.addEventListener("dblclick", () => {
     localD.style.display = "block";
@@ -65,9 +92,6 @@ LocalDisk_D.addEventListener("dblclick", () => {
 
 // actions for local disk E
 
-const localE = document.querySelector(".localE");
-
-const LocalDisk_E = document.querySelector(".disk-three");
 
 LocalDisk_E.addEventListener("dblclick", () => {
     localE.style.display = "block";
@@ -77,9 +101,6 @@ LocalDisk_E.addEventListener("dblclick", () => {
 
 // actions for local disk F
 
-const localF = document.querySelector(".localF");
-
-const LocalDisk_F = document.querySelector(".disk-four");
 
 LocalDisk_F.addEventListener("dblclick", () => {
     localF.style.display = "block";
@@ -97,10 +118,26 @@ const main_diskss = document.querySelectorAll(".inside-diskss");
 
 sidebar_disks.forEach(e => {
     e.addEventListener("click", () => {
-       main_diskss.forEach(d => d.style.display = "none");
+        main_diskss.forEach(d => d.style.display = "none");
 
-        const target = e.dataset.set;
-        document.querySelector("." + target).style.display = "block";
+        const diskTarget = e.getAttribute("data-set");
+        // document.querySelector("." + diskTarget).style.display = "block";
+        if (diskTarget === "C") {
+            localC.style.display = "block";
+            
+            folder_drives.style.display = "none";
+        } else if (diskTarget === "D") {
+            localD.style.display = "block";
+            folder_drives.style.display = "none";
+        } else if (diskTarget === "E") {
+            localE.style.display = "block";
+            folder_drives.style.display = "none";
+        } else if (diskTarget === "F") {
+            localF.style.display = "block";
+            folder_drives.style.display = "none";
+        }
 
     });
 });
+
+
