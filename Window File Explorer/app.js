@@ -43,7 +43,7 @@ const folder_drives = document.querySelector(".folder-drives");
 
 const LocalDisk_C = document.querySelector(".disk-one");
 
-LocalDisk_C.addEventListener("dblclick", ()=>{
+LocalDisk_C.addEventListener("dblclick", () => {
     localC.style.display = "block";
     folder_drives.style.display = "none";
     dsection.style.display = "none";
@@ -86,3 +86,21 @@ LocalDisk_F.addEventListener("dblclick", () => {
     folder_drives.style.display = "none";
     dsection.style.display = "none";
 })
+
+
+// actions from sidebar options
+
+const sidebar_disks = document.querySelectorAll(".pcdisks-side");
+
+const main_diskss = document.querySelectorAll(".inside-diskss");
+
+
+sidebar_disks.forEach(e => {
+    e.addEventListener("click", () => {
+       main_diskss.forEach(d => d.style.display = "none");
+
+        const target = e.dataset.set;
+        document.querySelector("." + target).style.display = "block";
+
+    });
+});
