@@ -67,6 +67,8 @@ ThisPc.forEach(e => {
         dsection.classList.toggle("shows-dsection");
         folder_right.classList.toggle("ardown");
 
+
+
     });
 });
 
@@ -116,28 +118,56 @@ const sidebar_disks = document.querySelectorAll(".pcdisks-side");
 const main_diskss = document.querySelectorAll(".inside-diskss");
 
 
+
+// hide all local disks
+
+function hidealldisks() {
+    localC.style.display = "none";
+    localD.style.display = "none";
+    localE.style.display = "none";
+    localF.style.display = "none";
+}
+
+
 sidebar_disks.forEach(e => {
     e.addEventListener("click", () => {
-        main_diskss.forEach(d => d.style.display = "none");
+
+        hidealldisks();
 
         const diskTarget = e.getAttribute("data-set");
-        // document.querySelector("." + diskTarget).style.display = "block";
+        folder_drives.style.display = "none";
+        dsection.style.display = "none";
+
         if (diskTarget === "C") {
             localC.style.display = "block";
-            
-            folder_drives.style.display = "none";
         } else if (diskTarget === "D") {
             localD.style.display = "block";
-            folder_drives.style.display = "none";
         } else if (diskTarget === "E") {
             localE.style.display = "block";
-            folder_drives.style.display = "none";
         } else if (diskTarget === "F") {
             localF.style.display = "block";
-            folder_drives.style.display = "none";
         }
 
     });
 });
 
+window.addEventListener("DOMContentLoaded", () => {
 
+    // show disks by default
+    dsection.style.display = "flex";
+    dsection.classList.add("shows-dsection");
+
+    // arrow ko down state mein rakho
+    folder_right.classList.add("ardown");
+
+});
+
+// simple back btn 
+
+const backBtn = document.querySelector(".backbtn");
+
+backBtn.addEventListener("click", () => {
+    hidealldisks();
+    dsection.style.display = "flex";
+    folder_drives.style.display = "flex";
+});

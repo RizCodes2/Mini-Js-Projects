@@ -277,9 +277,8 @@ body {
 }
 
 .pcdisks.shown {
-    display: block;
+    /* display: block; */
     display: flex;
-    /* align-items: center; */
     flex-direction: column;
     gap: 2px;
 
