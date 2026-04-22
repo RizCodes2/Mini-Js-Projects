@@ -14,10 +14,12 @@
 
 <body>
     <div class="wrap">
+
         <div class="header">
             <h1>Password <br> Generator</h1>
             <p>Craft a cryptographically secure password</p>
         </div>
+
         <div class="output-card">
             <div class="password-display placeholder" id="pwDisplay">Click Generate to Start</div>
             <button id="copyBtn" class="icon-btn" title="Copy">
@@ -35,7 +37,75 @@
             </button>
         </div>
 
+        <div class="strength-bar">
+            <div class="strength-seg" id="s1"></div>
+            <div class="strength-seg" id="s2"></div>
+            <div class="strength-seg" id="s3"></div>
+            <div class="strength-seg" id="s4"></div>
+            <span class="strength-label" id="strengthLabel">Weak</span>
+        </div>
 
+        <div class="controls">
+
+            <div class="slider-row">
+                <div class="slider-label">
+                    <span>Length</span>
+                    <strong id="lenVal">16</strong>
+                </div>
+                <input type="range" min="8" max="64" value="16" step="1" id="lenSlider">
+            </div>
+
+            <div class="toggles">
+
+                <div class="toggle-row active" data-key="upper">
+                    <div class="toggle-box">
+                        <svg viewBox="0 0 12 12">
+                            <polyline points="2,6 5,9 10,3" />
+                        </svg>
+                    </div>
+                    <span class="toggle-text">Uppercase (A–Z)</span>
+                </div>
+
+                <div class="toggle-row active" data-key="lower">
+                    <div class="toggle-box">
+                        <svg viewBox="0 0 12 12">
+                            <polyline points="2,6 5,9 10,3" />
+                        </svg>
+                    </div>
+                    <span class="toggle-text">Lowercase (a–z)</span>
+                </div>
+
+                <div class="toggle-row active" data-key="nums">
+                    <div class="toggle-box">
+                        <svg viewBox="0 0 12 12">
+                            <polyline points="2,6 5,9 10,3" />
+                        </svg>
+                    </div>
+                    <span class="toggle-text">Numbers (0–9)</span>
+                </div>
+
+                <div class="toggle-row active" data-key="syms">
+                    <div class="toggle-box">
+                        <svg viewBox="0 0 12 12">
+                            <polyline points="2,6 5,9 10,3" />
+                        </svg>
+                    </div>
+                    <span class="toggle-text">Symbols (!@#…)</span>
+                </div>
+
+                <div class="toggle-row" data-key="noamb">
+                    <div class="toggle-box">
+                        <svg viewBox="0 0 12 12">
+                            <polyline points="2,6 5,9 10,3" />
+                        </svg>
+                    </div>
+                    <span class="toggle-text">No ambiguous (0Ol1)</span>
+                </div>
+            </div>
+        </div>
+
+        <button class="generate-btn" id="genBtn">Generate Password</button>
+        <div class="copied-toast" id="toast">Copied to clipboard!</div>
 
     </div>
     <script src="app.js"></script>
