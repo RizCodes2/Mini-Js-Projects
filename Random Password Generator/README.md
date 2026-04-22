@@ -13,18 +13,6 @@ A clean, cryptographically secure password generator built with pure HTML, CSS, 
 - Dark mode support (auto-detects system preference)
 - Zero dependencies — works offline
 
-## 🚀 Usage
-
-No installation needed. Just open `password_generator.html` in any modern browser.
-
-```bash
-# Clone the repo
-git clone https://github.com/RizCodes2/Random Password Generator.git
-
-# Open the file
-open index.html
-```
-
 ## 🛠️ Built With
 
 - HTML5
