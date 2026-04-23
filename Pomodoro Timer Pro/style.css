@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(27, 27, 27);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    background-color: #2d2d2d;
+    width: 350px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+.timer-display {
+    font-size: 5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    font-variant-numeric: tabular-nums;
+    color: white;
+}
+
+.modes {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1.5rem;
+}
+
+.modebtns {
+    background: none;
+    border: 1px solid #555;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.modebtns.active {
+    background: #ff6b6b;
+    border-color: #ff6b6b;
+}
+
+.controls button {
+    padding: 10px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: 0.2s;
+}
+
+#start-btn {
+    background: #4ecdc4;
+    color: #1a1a1a;
+    font-weight: bold;
+}
+
+#reset-btn {
+    background: #555;
+    color: white;
+}
+
+hr {
+    border: 0.5px solid #444;
+    margin: 2rem 0;
+}
+
+.task-section input {
+    width: 80%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.task-section h3 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.task-section button {
+    padding: 8px;
+    background: #ff6b6b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+li {
+    background: #3d3d3d;
+    padding: 5px 8px;
+    margin-top: 8px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
