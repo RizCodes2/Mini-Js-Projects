@@ -19,7 +19,7 @@ function validatePhone(val) {
     if (!val) return { ok: false, msg: 'Phone number is Necessary' };
     if (!/^((\+92)|0)?3[0-9]{9}$/.test(val))
         return { ok: false, msg: 'Pakistan format: 03001234567' };
-    return { ok: true, msg: 'Phone number ok' };
+    return { ok: true, msg: 'Correct Phone Number' };
 }
 
 // --- UI Update ---
