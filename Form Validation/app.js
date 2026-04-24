@@ -3,23 +3,23 @@
 function validateEmail(val) {
     if (!val) return { ok: false, msg: 'Email is Necessary' };
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!regex.test(val)) return { ok: false, msg: 'Sahi format: example@domain.com' };
-    return { ok: true, msg: 'Email sahi hai' };
+    if (!regex.test(val)) return { ok: false, msg: 'Correct format: example@domain.com' };
+    return { ok: true, msg: 'Correct Email' };
 }
 
 function validatePassword(val) {
     if (!val) return { ok: false, msg: 'Password is Necessary' };
-    if (val.length < 8) return { ok: false, msg: 'Kam se kam 8 characters chahiye' };
-    if (!/[A-Z]/.test(val)) return { ok: false, msg: 'Ek capital letter hona chahiye' };
-    if (!/[0-9]/.test(val)) return { ok: false, msg: 'Ek number hona chahiye' };
-    return { ok: true, msg: 'Password strong hai' };
+    if (val.length < 8) return { ok: false, msg: 'Minimum 8 Characters are Allowed' };
+    if (!/[A-Z]/.test(val)) return { ok: false, msg: 'Need One Capital Letter' };
+    if (!/[0-9]/.test(val)) return { ok: false, msg: 'Need One Lowercase Letter' };
+    return { ok: true, msg: 'Strong Password' };
 }
 
 function validatePhone(val) {
     if (!val) return { ok: false, msg: 'Phone number is Necessary' };
     if (!/^((\+92)|0)?3[0-9]{9}$/.test(val))
         return { ok: false, msg: 'Pakistan format: 03001234567' };
-    return { ok: true, msg: 'Phone number sahi hai' };
+    return { ok: true, msg: 'Phone number ok' };
 }
 
 // --- UI Update ---
