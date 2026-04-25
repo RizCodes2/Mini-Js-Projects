@@ -14,7 +14,7 @@ const forecastContainer = document.getElementById("forecast-days");
 
 async function getWeatherData(city) {
     try {
-        // 1. Pehle City Name se Latitude aur Longitude nikalna
+        // locate Latitude and Longitude by city name
         
         const geoUrl = `https://geocoding-api.open-meteo.com/v1/search?name=${city}&count=1&language=en&format=json`;
         const geoRes = await fetch(geoUrl);
@@ -30,7 +30,7 @@ async function getWeatherData(city) {
         const { latitude, longitude, name, country } = geoData.results[0];
         cityName.innerText = `${name}, ${country}`;
 
-        // 2. Ab Weather Data fetch karna
+        // 2. Data Fetching 
         const weatherUrl = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,relative_humidity_2m,wind_speed_10m,weather_code&daily=weather_code,temperature_2m_max&timezone=auto`;
 
         const weatherRes = await fetch(weatherUrl);
@@ -43,6 +43,7 @@ async function getWeatherData(city) {
         description.innerText = getWeatherDesc(data.current.weather_code);
 
         // 3. 5-Day Forecast Update
+
         updateForecast(data.daily);
 
     } catch (error) {
@@ -52,9 +53,9 @@ async function getWeatherData(city) {
 }
 
 function updateForecast(daily) {
-    forecastContainer.innerHTML = ""; // Purana data clear karein
+    forecastContainer.innerHTML = ""; // for cleaning previous code
 
-    // Daily arrays mein se data nikalna (Pehle 5 din)
+    // Getting data from array[]
 
     for (let i = 0; i < 5; i++) {
         const date = new Date(daily.time[i]);
