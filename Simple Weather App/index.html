@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="search-box">
+            <input type="text" id="city-input" placeholder="Enter city name..." spellcheck="false">
+            <button id="search-btn">Search</button>
+        </div>
+
+        <div class="weather-card">
+            <div class="current-info">
+                <h2 id="city-name">City Name</h2>
+                <p id="date">Friday, 25 April</p>
+                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" id="main-icon">
+                <h1 id="temp">--°C</h1>
+                <p id="description">Cloudy</p>
+            </div>
+
+            <div class="details">
+                <div class="col">
+                    <p>Humidity</p>
+                    <span id="humidity">--%</span>
+                </div>
+                <div class="col">
+                    <p>Wind Speed</p>
+                    <span id="wind">-- km/h</span>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="forecast-title">5-Day Forecast</h3>
+        <div class="forecast-container" id="forecast-days">
+            <div class="forecast-item">
+                <p>Mon</p>
+                <img src="https://openweathermap.org/img/wn/01d.png" alt="icon">
+                <span>25°C</span>
+            </div>
+            <div class="forecast-item">
+                <p>Tue</p><img src="https://openweathermap.org/img/wn/02d.png" alt="icon"><span>24°C</span>
+            </div>
+            <div class="forecast-item">
+                <p>Wed</p><img src="https://openweathermap.org/img/wn/03d.png" alt="icon"><span>22°C</span>
+            </div>
+            <div class="forecast-item">
+                <p>Thu</p><img src="https://openweathermap.org/img/wn/04d.png" alt="icon"><span>26°C</span>
+            </div>
+            <div class="forecast-item">
+                <p>Fri</p><img src="https://openweathermap.org/img/wn/10d.png" alt="icon"><span>23°C</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
