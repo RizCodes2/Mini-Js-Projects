@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter Pro</title>
+</head>
+
+<body>
+    <div class="converter-card">
+        <div class="header">
+            <h1>Unit Converter Pro</h1>
+            <p style="font-size: 0.8rem; color: #64748b;">Height, Weight, Temp & More</p>
+        </div>
+
+        <!-- Category Selection -->
+        <div class="category-grid">
+            <button class="cat-btn active" onclick="setCategory('length')">Length</button>
+            <button class="cat-btn" onclick="setCategory('weight')">Weight</button>
+            <button class="cat-btn" onclick="setCategory('temp')">Temp</button>
+            <button class="cat-btn" onclick="setCategory('volume')">Volume</button>
+            <button class="cat-btn" onclick="setCategory('area')">Area</button>
+        </div>
+
+        <div class="input-group">
+            <label>Amount</label>
+            <input type="number" id="inputValue" placeholder="0.00" oninput="convert()">
+        </div>
+
+        <div class="input-group">
+            <label>From</label>
+            <select id="fromUnit" onchange="convert()"></select>
+        </div>
+
+        <div class="swap-icon">↕</div>
+
+        <div class="input-group">
+            <label>To</label>
+            <select id="toUnit" onchange="convert()"></select>
+        </div>
+
+        <div class="result-box">
+            <span class="result-value" id="resultDisplay">0.00</span>
+            <div id="unitLabel" style="font-size: 0.8rem; margin-top: 4px; color: #64748b;">Result</div>
+        </div>
+    </div>
+</body>
+
+</html>
