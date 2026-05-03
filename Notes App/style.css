@@ -1,0 +1,94 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    background: #f4f4f4;
+}
+
+.app-container {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#search-bar {
+    margin: 15px 0;
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+}
+
+#notes-list {
+    list-style: none;
+    padding: 0;
+    overflow-y: auto;
+}
+
+#notes-list li {
+    padding: 10px;
+    border-bottom: 1px solid #34495e;
+    cursor: pointer;
+}
+
+#notes-list li:hover {
+    background: #34495e;
+}
+
+/* Editor */
+.editor-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background: white;
+}
+
+.toolbar {
+    padding: 10px;
+    background: #eee;
+    display: flex;
+    gap: 10px;
+}
+
+.view-split {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+textarea,
+.preview {
+    width: 50%;
+    padding: 20px;
+    border: none;
+    outline: none;
+    overflow-y: auto;
+}
+
+textarea {
+    border-right: 1px solid #ddd;
+    font-family: monospace;
+    font-size: 16px;
+    resize: none;
+}
+
+.preview {
+    background: #fff;
+}
+
+.danger {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
