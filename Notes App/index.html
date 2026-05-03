@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Taking App</title>
+</head>
+<body>
+     <div class="app-container">
+        <aside class="sidebar">
+            <button id="add-note-btn">+ New Note</button>
+            <input type="text" id="search-bar" placeholder="Search notes...">
+            <ul id="notes-list"></ul>
+        </aside>
+
+        <main class="editor-container">
+            <div class="toolbar">
+                <button id="save-btn">Save Note</button>
+                <button id="delete-btn" class="danger">Delete</button>
+            </div>
+            <div class="view-split">
+                <textarea id="markdown-input" placeholder="Type your markdown here..."></textarea>
+                <div id="markdown-preview" class="preview"></div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
